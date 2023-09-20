@@ -3,7 +3,7 @@ dotenv.config({ path: '.env' });
 import spoApiClient from './sharePoint-API';
 import logger from './winston';
 import { getElapsedTime } from './misc';
-import { AgentLeaveTrackerResponse } from './sharePoint-API/types';
+import { AgentLeaveTrackerItem, AgentLeaveTrackerResponse } from './sharePoint-API/types';
 
 // Main
 (async () => {
@@ -17,10 +17,18 @@ import { AgentLeaveTrackerResponse } from './sharePoint-API/types';
     // Get Agent Leave Tracker Items
     const trackerItems: AgentLeaveTrackerResponse = await spoApiClient.getAgentLeaveTrackerItems();
 
-    // Quick print to see first item in value array
+    // Quick test - print to see first item in value array
     console.log(trackerItems.value[0]);
-    // Quick print title field of first list item
+
+    // Quick test - print title field of first list item
     console.log(trackerItems.value[0].Title);
+
+    // Quick test - loop through list items, print employee names
+    for (const listItem of trackerItems.value) {
+      if (listItem.Employee_x0020_Name) {
+        console.log(listItem.Employee_x0020_Name);
+      }
+    }
 
     // ✅ Process Complete
     logger.info(`--- <cool script name> Complete (${getElapsedTime(startTime)}) ---`);
