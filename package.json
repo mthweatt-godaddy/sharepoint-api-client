@@ -1,0 +1,32 @@
+{
+  "name": "sharepoint-api-client",
+  "version": "1.0.0",
+  "description": "Basic example for a SharePoint API class/client",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "NODE_ENV=development node dist/index.js",
+    "prod": "NODE_ENV=production node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mthweatt-godaddy/sharepoint-api-client.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mthweatt-godaddy/sharepoint-api-client/issues"
+  },
+  "homepage": "https://github.com/mthweatt-godaddy/sharepoint-api-client#readme",
+  "dependencies": {
+    "axios": "^1.5.0",
+    "dotenv": "^16.3.1",
+    "typescript": "^5.2.2",
+    "winston": "^3.10.0",
+    "winston-daily-rotate-file": "^4.7.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.6.3"
+  }
+}

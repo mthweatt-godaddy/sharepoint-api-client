@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "outDir": "dist" /* Specify an output folder for all emitted files. */,
+    "removeComments": true, // Strips all comments from TypeScript files when converting into JavaScript- you rarely read compiled code so this saves space
+    "allowJs": true /* Allow JavaScript files to be a part of your program. Use the `checkJS` option to get errors from these files. */,
+    "module": "commonjs" /* Specify what module code is generated. */,
+    "target": "ES6" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+    "esModuleInterop": true, // fixes some issues TS originally had with the ES6 spec where TypeScript treats CommonJS/AMD/UMD modules similar to ES6 module
+    "sourceMap": true /* Create source map files for emitted JavaScript files. */,
+    "moduleResolution": "node" /* Specify how TypeScript looks up a file from a given module specifier. */,
+    "noEmitOnError": true /* Disable emitting files if any type checking errors are reported. */
+  },
+  "include": ["./src/**/*.ts"],
+  "exclude": ["node_modules/**/*"]
+}
