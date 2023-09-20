@@ -3,7 +3,7 @@ dotenv.config({ path: '.env' });
 import spoApiClient from './sharePoint-API';
 import logger from './winston';
 import { getElapsedTime } from './misc';
-import { AgentLeaveTrackerItem, AgentLeaveTrackerResponse } from './sharePoint-API/types';
+import { AgentLeaveTrackerResponse } from './sharePoint-API/types';
 
 // Main
 (async () => {
