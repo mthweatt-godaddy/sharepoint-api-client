@@ -25,7 +25,8 @@ export class SpoApiClient {
       'SPO_CLIENT_ASSERTION',
       'SPO_SCOPE',
       'SPO_CLIENT_ASSERTION_TYPE',
-      'SPO_GRANT_TYPE'
+      'SPO_GRANT_TYPE',
+      'SPO_TOKEN_URL'
     ];
     // Holds missing vars
     let missing_vars: string[] = [];
